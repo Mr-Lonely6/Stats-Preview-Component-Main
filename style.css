@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+/* Clear default browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+html {
+    font-size: 15px;
+}
+
+:root {
+    --veryDarkBlue: hsl(233, 47%, 7%);
+    --cardBackground: hsl(244, 38%, 16%);
+    --softViolet: hsl(277, 64%, 61%);
+    --mainHeading: hsl(0, 0%, 100%);
+    --mainParagraph:hsla(0, 0%, 100%, 0.75);
+    --statHeadings: hsla(0, 0%, 100%, 0.6);
+}
+
+.stats {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--veryDarkBlue);
+    color: var(--mainHeading);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70vw;
+    background-color: var(--cardBackground);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card .desc h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card .desc h1 span {
+    color: var(--softViolet);
+    font-size: 2rem;
+}
+
+.card .desc p {
+    color: var(--mainParagraph);
+}
+
+.card .desc {
+    width: 50%;
+    padding: 4rem;
+}
+
+.card .card-image {
+    width: 50%;
+    background: linear-gradient(0deg, hsla(277, 64%, 61%, 0.5) 0%, hsla(277, 64%, 61%, 0.5) 100%), url(images/image-header-desktop.jpg) no-repeat;
+    border-radius: 0 10px 10px 0;
+    
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.company, .templates, .queries {
+    margin-top: 4rem;
+    text-transform: uppercase;
+    
+}
+
+.number {
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+}
+
+.name {
+    color: var(--statHeadings);
+    
+}
+
+/* Media Queries */
+@media (max-width: 375px) {
+    .container .card{
+        display: flex;
+        flex-flow: column-reverse;
+        width: 90vw;
+        height: 90vh;
+        justify-content: space-between;
+    }
+
+    .card .desc {
+        width: auto;
+        height: 70%;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .card .stats {   
+        display: flex;
+        flex-flow: column wrap;
+        margin-top: -3rem; 
+        
+    }
+
+    .card .card-image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+   
+}
